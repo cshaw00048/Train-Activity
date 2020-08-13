@@ -6,7 +6,6 @@ $(document).ready(function(){
     
             // Grabs user input and assign to variables
             var trainName = $("#trainNameInput").val().trim();
-            var lineName = $("#lineInput").val().trim();
             var destination = $("#destinationInput").val().trim();
             var trainTimeInput = moment($("#trainTimeInput").val().trim(), "HH:mm").subtract(1, "years").format("X");;
             var frequencyInput = $("#frequencyInput").val().trim();
@@ -15,7 +14,6 @@ $(document).ready(function(){
             // Will push this to firebase
             var newTrain = {
                 name:  trainName,
-                line: lineName,
                 destination: destination,
                 trainTime: trainTimeInput,
                 frequency: frequencyInput,
